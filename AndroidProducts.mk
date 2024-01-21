@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_leo.mk
+    $(LOCAL_DIR)/revengeos_leo.mk
     
 COMMON_LUNCH_CHOICES := \
-    lineage_leo-user \
-    lineage_leo-userdebug \
-    lineage_leo-eng
+    revengeos_leo-user \
+    revengeos_leo-userdebug \
+    revengeos_leo-eng
