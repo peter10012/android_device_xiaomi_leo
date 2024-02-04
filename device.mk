@@ -5,7 +5,7 @@
 #
 
 # Inherit from msm8994-common
-$(call inherit-product, device/xiaomi/msm8994-common/msm8994.mk)
+$(call inherit-product, device/xiaomi/msm8994-common/msm8994-common.mk)
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/leo/leo-vendor.mk)
 
@@ -55,5 +55,3 @@ PRODUCT_SOONG_NAMESPACES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.target.rc
-
-endif
