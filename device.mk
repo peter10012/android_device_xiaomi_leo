@@ -38,8 +38,8 @@ PRODUCT_PACKAGES += \
     init.xiaomi.device.rc
 
 # TODO Sensors
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
+PRODUCT_PACKAGES += \
+    sensors.msm8994
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -48,7 +48,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/leo/leo-vendor.mk)
 
-# MOD: MiuiCamera
+# TODO MOD: MiuiCamera
 ifneq ($(wildcard vendor/miuicamera),)
 $(call inherit-product, vendor/miuicamera/config.mk)
 PRODUCT_COPY_FILES += \
