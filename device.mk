@@ -6,6 +6,8 @@
 
 # Inherit from msm8994-common
 $(call inherit-product, device/xiaomi/msm8994-common/msm8994.mk)
+# Inherit from vendor blobs
+$(call inherit-product, vendor/xiaomi/leo/leo-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -50,12 +52,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/leo/leo-vendor.mk)
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.target.rc
 
-# TODO MOD: MiuiCamera
-ifneq ($(wildcard vendor/miuicamera),)
-$(call inherit-product, vendor/miuicamera/config.mk)
-PRODUCT_COPY_FILES += \
-    vendor/miuicamera/common/proprietary/etc/device_features/olive.xml:$(TARGET_COPY_OUT_VENDOR)/etc/device_features/leo.xml
 endif
