@@ -21,10 +21,9 @@ TARGET_OTA_ASSERT_DEVICE := NotePro,leo
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
-# TODO Init 
-
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_olives
-TARGET_RECOVERY_DEVICE_MODULES := libinit_olives
+# Init 
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_leo
+TARGET_RECOVERY_DEVICE_MODULES := libinit_leo
 
 # Kernel
 TARGET_KERNEL_CONFIG := leo_user_defconfig
