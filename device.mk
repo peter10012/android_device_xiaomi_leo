@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from sdm439-common
-$(call inherit-product, device/xiaomi/sdm439-common/sdm439.mk)
+# Inherit from msm8994-common
+$(call inherit-product, device/xiaomi/msm8994-common/msm8994.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_sdm439_pm8953.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_sdm439_pm8953.xml
+    $(DEVICE_PATH)/audio/mixer_paths.xml:system/vendor/etc/mixer_paths.xml
 
 # Consumer IR
 PRODUCT_PACKAGES += \
