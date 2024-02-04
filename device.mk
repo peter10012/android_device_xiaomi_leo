@@ -37,7 +37,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.xiaomi.device.rc
 
-# TODO Sensors
+# keylayout
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/keylayout/cyttsp_button.kl:system/vendor/usr/keylayout/cyttsp_button.kl \
+    $(DEVICE_PATH)/keylayout/synaptics_dsx.kl:system/vendor/usr/keylayout/synaptics_dsx.kl
+
+# Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8994
 
