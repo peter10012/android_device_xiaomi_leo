@@ -5,17 +5,17 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_olives.mk
+    $(LOCAL_DIR)/lineage_leo.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_olives-user \
-    lineage_olives-userdebug \
-    lineage_olives-eng
+    lineage_leo-user \
+    lineage_leo-userdebug \
+    lineage_leo-eng
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/revengeos_olives.mk
+    $(LOCAL_DIR)/revengeos_leo.mk
 
 COMMON_LUNCH_CHOICES += \
-    revengeos_olives-user \
-    revengeos_olives-userdebug \
-    revengeos_olives-eng
+    revengeos_leo-user \
+    revengeos_leo-userdebug \
+    revengeos_leo-eng

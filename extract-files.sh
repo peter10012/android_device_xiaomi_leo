@@ -14,7 +14,7 @@ fi
 
 set -e
 
-export DEVICE=olives
+export DEVICE=leo
 export DEVICE_COMMON=msm8994-common
 export VENDOR=xiaomi
 

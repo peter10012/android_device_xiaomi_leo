@@ -13,8 +13,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1572
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH := 1440
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# Fingerprint
+# TODO Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_olives \
     android.hardware.biometrics.fingerprint@2.2
@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.xiaomi.device.rc
 
-# Sensors
+# TODO Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
@@ -52,11 +52,11 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/olives/olives-vendor.mk)
+$(call inherit-product, vendor/xiaomi/leo/leo-vendor.mk)
 
 # MOD: MiuiCamera
 ifneq ($(wildcard vendor/miuicamera),)
 $(call inherit-product, vendor/miuicamera/config.mk)
 PRODUCT_COPY_FILES += \
-    vendor/miuicamera/common/proprietary/etc/device_features/olive.xml:$(TARGET_COPY_OUT_VENDOR)/etc/device_features/olives.xml
+    vendor/miuicamera/common/proprietary/etc/device_features/olive.xml:$(TARGET_COPY_OUT_VENDOR)/etc/device_features/leo.xml
 endif

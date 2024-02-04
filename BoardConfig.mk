@@ -7,7 +7,7 @@
 # Inherit from common msm8994-common
 include device/xiaomi/msm8994-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/olives
+DEVICE_PATH := device/xiaomi/leo
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8994
@@ -27,7 +27,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_olives
 TARGET_RECOVERY_DEVICE_MODULES := libinit_olives
 
 # Kernel
-TARGET_KERNEL_CONFIG := olives-perf_defconfig
+TARGET_KERNEL_CONFIG := leo_user_defconfig
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1744830464 #1920M
@@ -46,4 +46,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 # TODO Shims
 
 # Inherit from the proprietary version
-include vendor/xiaomi/olives/BoardConfigVendor.mk
+include vendor/xiaomi/leo/BoardConfigVendor.mk

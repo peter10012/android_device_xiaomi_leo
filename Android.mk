@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),olives)
+ifeq ($(TARGET_DEVICE),leo)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 endif
