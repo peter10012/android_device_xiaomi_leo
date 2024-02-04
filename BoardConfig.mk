@@ -42,7 +42,8 @@ VENDOR_SECURITY_PATCH := 2021-07-01
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# TODO Shims
+# Shims
+TARGET_LD_SHIM_LIBS += /system/vendor/lib/hw/camera.vendor.msm8994.so|libshim_camera.so
 
 # Inherit from the proprietary version
 include vendor/xiaomi/leo/BoardConfigVendor.mk
